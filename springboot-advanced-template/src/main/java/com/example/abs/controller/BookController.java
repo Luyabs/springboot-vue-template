@@ -28,7 +28,7 @@ public class BookController {
     @ApiOperation(value = "分页获取书本", notes = "需要传入当前页和页大小,可以选择传入条件[type, name, description]进行模糊查询")
     @GetMapping
     public Result getPage(int currentPage, int pageSize, Book book) {
-        return Result.success().message("表单数据获取成功").data("page", bookService.selectPage(currentPage, pageSize, book));
+        return Result.success().data("page", bookService.selectPage(currentPage, pageSize, book));
     }
 
     @ApiOperation(value = "按id获取书本", notes = "需要传入路径变量")
