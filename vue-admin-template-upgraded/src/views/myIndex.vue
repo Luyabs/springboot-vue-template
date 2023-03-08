@@ -3,10 +3,12 @@
     <!-- 搜索框 与 新增 -->
     <div id="headBar" style="margin-top: 20px; margin-left: 20px;">
       <el-row :gutter="20">
-        <el-col :span="6"> <el-input placeholder="请输入内容" size="medium" prefix-icon="el-icon-search" v-model="searchText1"> </el-input> </el-col>
-        <el-col :span="6"> <el-input placeholder="请输入内容" size="medium" prefix-icon="el-icon-search" v-model="searchText2"> </el-input> </el-col> 
-        <el-button size="medium" @click="helloWorld()"> 查询 </el-button>
+        <el-col :span="4"> <el-input placeholder="类别" size="medium" prefix-icon="el-icon-search" v-model="searchType"> </el-input> </el-col>
+        <el-col :span="4"> <el-input placeholder="书名" size="medium" prefix-icon="el-icon-search" v-model="searchName"> </el-input> </el-col> 
+        <el-col :span="4"> <el-input placeholder="简介" size="medium" prefix-icon="el-icon-search" v-model="searchDescription"> </el-input> </el-col> 
+        <el-button size="medium" @click="fetchData()"> 查询 </el-button>
         <el-button type="success" size="medium" @click="add()"> 新增 </el-button>
+        <el-button size="primary" @click="helloWorld()"> Hello! </el-button>
       </el-row>
 
     </div>
@@ -85,8 +87,9 @@ import { getPage, getById, addBook, editBook, removeBook, sayHello } from '@/api
 export default {
   data() {
     return {
-      searchText1: '',
-      searchText2: '',
+      searchType: '',
+      searchName: '',
+      searchDescription: '',
 
       tableData: [],
       total: 0,
@@ -107,7 +110,7 @@ export default {
     // helloworld
     helloWorld() {
       sayHello().then(response => {
-        this.$message.success(response.data.hello + this.searchText1 + this.searchText2)
+        this.$message.success(response.data.hello + this.searchName + ' ' + this.searchName + ' ' + this.searchDescription)
       })
     },
 
@@ -128,11 +131,15 @@ export default {
       const params = {
         currentPage: this.currentPage,
         pageSize: this.pageSize,
+        type: this.searchType,
+        name: this.searchName,
+        description: this.searchDescription
       }
       getPage(params).then(response => {
         if (response.success === true) {
           this.tableData = response.data.page.records
           this.total = response.data.page.total
+          this.$message.success(response.message)
         }
         else
           this.$message.error(response.message)
