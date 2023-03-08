@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>educational_management_system</artifactId>
+    <artifactId>springboot-advanced-template</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>educational_management_system</name>
-    <description>educational_management_system</description>
+    <name>springboot-advanced-template</name>
+    <description>springboot-advanced-template</description>
     <properties>
         <java.version>17</java.version>
     </properties>
