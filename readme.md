@@ -10,20 +10,21 @@
 > > 并在src/main/resources/application-dev.yaml中配置MySQL数据库信息  
 > > 
 > 对于vue-admin-template，最好不超过 **nodejs 16**  
-> > 在vue-admin-template-upgraded文件夹下打开终端，输入npm install --registry=https://registry.npm.taobao.org 安装依赖  
+> > 在vue-admin-template-upgraded文件夹下打开终端  
+> > 输入npm install --registry=https://registry.npm.taobao.org 安装依赖  
 > > 通过npm run dev运行前端项目
 
 3. 模板整合了什么
 > springboot:
-> > 基础web三层结构  
-> > mybatis-plus
+> > 基础web三层结构   
+> > mybatis-plus  
 > > knife4j(仅ui) 运行项目后可通过此链接查看knife4j文档 http://localhost:8080/doc.html  
-> > cors跨域认证  
-> > 数据一致性
-> > jwt令牌 与 登录校验
-> > 元数据处理
-> > 全局异常处理  
-> > 公共字段填充  
+> > cors跨域认证   
+> > 数据一致性  
+> > jwt令牌 与 登录校验  
+> > 元数据处理  
+> > 全局异常处理   
+> > 公共字段填充   
 > > 
 > vue-admin-template: 
 > > 提供一个最常见的含CURD功能的表格界面  
