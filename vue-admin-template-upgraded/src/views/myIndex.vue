@@ -139,7 +139,6 @@ export default {
         if (response.success === true) {
           this.tableData = response.data.page.records
           this.total = response.data.page.total
-          this.$message.success(response.message)
         }
         else
           this.$message.error(response.message)
