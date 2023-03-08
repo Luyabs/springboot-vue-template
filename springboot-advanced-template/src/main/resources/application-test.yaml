@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  # DRUID
+    url: jdbc:mysql://localhost:3306/1  # MYSQL
+    username: root
+    password: 1234
+
