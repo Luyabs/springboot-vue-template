@@ -10,7 +10,7 @@ export function getList(params) {
 
 export function getPage(params) {
   return request({
-    url: '/book',
+    url: '/book/page',
     method: 'get',
     params
   })
@@ -33,7 +33,7 @@ export function addBook(data) {
 
 export function editBook(data) {
   return request({
-    url: '/book/',
+    url: '/book',
     method: 'put',
     data
   })
