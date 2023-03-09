@@ -20,6 +20,7 @@ import java.util.Map;
  * POST PUT的 /
  * DELETE的 /{id}
  * 因此在继承此类后 不该为这些路径设置对应的请求
+ * 可以不加@RequestMapping重写这些方法
  */
 public abstract class BaseController<T> {
     @SuppressWarnings("all")  // 会报找不到bean 但是子类继承后就可以正常完成依赖注入 可忽略此报错
