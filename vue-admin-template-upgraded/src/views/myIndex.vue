@@ -110,7 +110,7 @@ export default {
     // helloworld
     helloWorld() {
       sayHello().then(response => {
-        this.$message.success(response.data.hello + this.searchName + ' ' + this.searchName + ' ' + this.searchDescription)
+        this.$message.success(response.data.hello + this.searchType + ' ' + this.searchName + ' ' + this.searchDescription)
       })
     },
 
@@ -158,8 +158,8 @@ export default {
           this.$message.success(response.message)
         else
           this.$message.error(response.message)
+        this.fetchData()
       }).finally(
-        this.fetchData(),
         this.addDialogVisible = false
       )
     },
@@ -170,7 +170,7 @@ export default {
         // 获取该id对应的具体信息
         getById(id).then(response => {
           if (response.success === true) {
-            this.formData = response.data.book
+            this.formData = response.data.one
           }
           else {
             this.$message.error(response.message)
@@ -186,8 +186,8 @@ export default {
           this.$message.success(response.message)
         else
           this.$message.error(response.message)
+        this.fetchData()
       }).finally(
-        this.fetchData(),
         this.editDialogVisible = false
       )
     },
