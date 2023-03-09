@@ -18,6 +18,7 @@
 > springboot:
 > > 基础web三层结构   
 > > mybatis-plus  
+> > 集成controller基类
 > > knife4j(仅ui) 运行项目后可通过此链接查看knife4j文档 http://localhost:8080/doc.html  
 > > cors跨域认证   
 > > 数据一致性  
