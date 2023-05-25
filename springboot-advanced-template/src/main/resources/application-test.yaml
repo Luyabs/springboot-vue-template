@@ -7,6 +7,11 @@ spring:
     url: jdbc:mysql://localhost:3306/???  # MYSQL
     username: root
     password: ???
+  redis:
+    host: ????
+    port: 6379
+    database: 0
+    password: ????
 
 sa-token:
   # jwt秘钥
