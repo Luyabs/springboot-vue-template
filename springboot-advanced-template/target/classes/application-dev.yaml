@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  # DRUID
+    url: jdbc:mysql://localhost:3306/springboot_db  # MYSQL
+    username: root
+    password: aldnoah880213
+  redis:
+    host: 124.70.195.38
+    port: 6379
+    database: 0
+    password: 880213
+
+sa-token:
+  # jwt秘钥
+  jwt-secret-key: wadhsadhaskdaopqweioklsd122312j3hejkqasndj
