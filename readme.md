@@ -42,10 +42,11 @@
   
 ## 5. 以下是一些使用代码生成器后可能需要处理的问题
 ```严重``` 如果无法启动，请先考虑swagger版本冲突。解决方法：先在pom.xml注释掉springfox-boot-starter与swagger-xx    
+```警告``` src/main/java/com/example/onlinejudge/config/Knife4jConfig.java中请指定controller的路径，否则无法使用swagger      
 ```警告``` entity中除自动填充字段外LocalDateTime对应的属性可能需要手动添加 @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")   
 ```警告``` entity中自动填充字段需要额外设置 @TableField(fill = FieldFill.INSERT) 或Field.INSERT_UPDATE    
 ```警告``` entity中自动生成的字段需要修改主键自增策略  @TableId(type = IdType.ASSIGN_ID)    
 ```可添加``` 生成出来的service与controller没有任何代码   
 ```可添加``` 生成出来entity没有swagger注解   
 ```可添加``` 为controller添加@Api等swagger注解   
-```如果以上都没法解决问题请issue或手写代码```
+```如果以上都没法解决问题请issue，我将尽力解决问题``` ~~或开摆~~
